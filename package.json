@@ -3,7 +3,9 @@
     "start": "node server.js",
     "server": "nodemon server",
     "client": "npm start --prefix=../KareemEstore",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node seeder",
+    "data:destroy": "node seeder -d"
   },
   "name": "onlinestore-server",
   "version": "1.0.0",
@@ -22,6 +24,7 @@
   "description": "",
   "dependencies": {
     "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
